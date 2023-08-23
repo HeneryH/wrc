@@ -1,0 +1,23 @@
+name: "Varbase Page"
+description: "Provides Basic page content type and related configuration."
+type: module
+package: Varbase
+core_version_requirement: ~10.1.0
+dependencies:
+  - varbase_core:varbase_core
+install:
+  - text
+  - editor
+  - ckeditor5
+  - menu_ui
+  - rabbit_hole
+  - yoast_seo
+  - metatag
+  - length_indicator
+  - advanced_text_formatter
+  - maxlength
+
+# Information added by Drupal.org packaging script on 2023-08-02
+version: '10.0.0-beta7'
+project: 'varbase_core'
+datestamp: 1690996281

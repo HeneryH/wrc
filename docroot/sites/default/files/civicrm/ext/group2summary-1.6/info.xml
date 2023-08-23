@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<extension key="eu.tttp.group2summary" type="module">
+  <file>group2summary</file>
+  <name>group2summary</name>
+  <description>You like how tags are displayed in the contact summary? this extension does the same, for groups. You can also add the contact to a group from the summary (click on the Groups label)</description>
+  <license>AGPL-3.0</license>
+  <urls>
+    <url desc="Main Extension Page">http://github.com/TechToThePeople/group2summary</url>
+    <url desc="Documentation">http://github.com/TechToThePeople/group2summary</url>
+    <url desc="Support">http://forum.civicrm.org</url>
+    <url desc="Licensing">http://civicrm.org/licensing</url>
+  </urls>
+  <maintainer>
+    <author>xavier dutoit</author>
+    <email>xavier@tttp.eu</email>
+  </maintainer>
+  <version>1.6</version>
+  <releaseDate>2023-01-29</releaseDate>
+  <develStage>stable</develStage>
+  <compatibility>
+    <ver>5.49</ver>
+  </compatibility>
+  <civix>
+    <namespace>CRM/Group2summary</namespace>
+    <format>22.12.1</format>
+  </civix>
+</extension>

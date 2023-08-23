@@ -1,0 +1,60 @@
+framework:
+  dependencies:
+    - wrc_theme/bootstrap-styles
+    - wrc_theme/bootstrap-scripts
+    - wrc_theme/global-styles
+    - wrc_theme/global-scripts
+    - wrc_theme/fontawesome
+bootstrap-styles:
+  css:
+    base:
+      css/base/bootstrap.base.css: {  }
+bootstrap-scripts:
+  dependencies:
+    - core/drupal
+    - core/jquery
+  js:
+    js/popperjs/popper.js: {  }
+    js/bootstrap/bootstrap.min.js: {  }
+global-styles:
+  css:
+    base:
+      css/base/wrc_theme.base.css: {  }
+    layout:
+      css/layout/edge2edge.layout.css: {  }
+      css/layout/equal-height.layout.css: {  }
+      css/layout/print.layout.css:
+        media: print
+global-scripts:
+  js:
+    js/scripts.js: {  }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.ajax
+framework-rtl:
+  dependencies:
+    - wrc_theme/bootstrap-styles-rtl
+    - wrc_theme/bootstrap-scripts
+    - wrc_theme/global-styles-rtl
+    - wrc_theme/global-scripts
+    - wrc_theme/fontawesome
+bootstrap-styles-rtl:
+  css:
+    base:
+      css/base/bootstrap-rtl.base.css: {  }
+global-styles-rtl:
+  css:
+    base:
+      css/base/wrc_theme-rtl.base.css: {  }
+    theme:
+      fonts/droid/arabic/kufi/css/droidarabickufi.css: {  }
+content_moderation:
+  css:
+    theme:
+      css/theme/content-moderation.theme.css: {  }
+fontawesome:
+  css:
+    theme:
+      fonts/fontawesome-free/css/all.min.css:
+        minified: true

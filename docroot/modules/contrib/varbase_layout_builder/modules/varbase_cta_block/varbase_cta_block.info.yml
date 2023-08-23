@@ -1,0 +1,13 @@
+name: "Varbase CTA block"
+description: "A CTA block contains a button link that navigates to the desired destination."
+type: module
+package: "Varbase Blocks"
+core_version_requirement: ~10.1.0
+dependencies:
+  - varbase_layout_builder:varbase_layout_builder
+  - varbase_layout_builder:varbase_buttons_block
+
+# Information added by Drupal.org packaging script on 2023-08-10
+version: '10.1.0-alpha9'
+project: 'varbase_layout_builder'
+datestamp: 1691661814

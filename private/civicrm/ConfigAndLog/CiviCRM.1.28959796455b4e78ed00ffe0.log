@@ -1,0 +1,285 @@
+Aug 22 11:15:31  [info] Creating canary table
+
+Aug 22 11:28:47  [error] 
+$Fatal Error Details = array:3 [
+  "message" => "Unknown extension: mjwshared"
+  "code" => null
+  "exception" => CRM_Core_Exception {#4354
+    #message: "Unknown extension: mjwshared"
+    #code: 0
+    #file: "/var/www/varbase/vendor/civicrm/civicrm-core/api/api.php"
+    #line: 135
+    #cause: null
+    -_trace: null
+    -errorData: array:3 [
+      "is_error" => 1
+      "error_message" => "Unknown extension: mjwshared"
+      "error_code" => "undefined"
+    ]
+    trace: {
+      /var/www/varbase/vendor/civicrm/civicrm-core/api/api.php:135 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Admin/Form/Extensions.php:187 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Form.php:624 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/StateMachine.php:144 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/QuickForm/Action/Next.php:43 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-packages/HTML/QuickForm/Controller.php:203 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-packages/HTML/QuickForm/Page.php:103 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Controller.php:355 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Page/Basic.php:364 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Page/Basic.php:170 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Admin/Page/Extensions.php:105 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php:319 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php:69 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php:36 { …}
+      /var/www/varbase/docroot/modules/contrib/civicrm/src/Civicrm.php:88 {
+        Drupal\civicrm\Civicrm->invoke($args)
+        › ob_start();
+        › $content = \CRM_Core_Invoke::invoke($args);
+        › $output = ob_get_clean();
+      }
+      /var/www/varbase/docroot/modules/contrib/civicrm/src/Controller/CivicrmController.php:83 { …}
+      Drupal\civicrm\Controller\CivicrmController->main() {}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php:123 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/Render/Renderer.php:583 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php:124 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php:97 { …}
+      /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php:166 { …}
+      /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php:74 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/Session.php:58 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php:48 { …}
+      /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php:106 { …}
+      /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php:85 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php:48 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php:51 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/StackedHttpKernel.php:51 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/DrupalKernel.php:704 { …}
+      /var/www/varbase/docroot/index.php:19 { …}
+    }
+  }
+]
+
+
+Aug 22 11:28:47  [debug] $backTrace = #0 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Error.php(443): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php(39): CRM_Core_Error::handleUnhandledException(Object(CRM_Core_Exception))
+#2 /var/www/varbase/docroot/modules/contrib/civicrm/src/Civicrm.php(88): CRM_Core_Invoke::invoke((Array:3))
+#3 /var/www/varbase/docroot/modules/contrib/civicrm/src/Controller/CivicrmController.php(83): Drupal\civicrm\Civicrm->invoke((Array:3))
+#4 [internal function](): Drupal\civicrm\Controller\CivicrmController->main((Array:3), "")
+#5 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(123): call_user_func_array((Array:2), (Array:2))
+#6 /var/www/varbase/docroot/core/lib/Drupal/Core/Render/Renderer.php(583): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->Drupal\Core\EventSubscriber\{closure}()
+#7 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(124): Drupal\Core\Render\Renderer->executeInRenderContext(Object(Drupal\Core\Render\RenderContext), Object(Closure))
+#8 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(97): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->wrapControllerExecutionInRenderContext((Array:2), (Array:2))
+#9 /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php(166): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->Drupal\Core\EventSubscriber\{closure}()
+#10 /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php(74): Symfony\Component\HttpKernel\HttpKernel->handleRaw(Object(Symfony\Component\HttpFoundation\Request), 1)
+#11 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/Session.php(58): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#12 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php(48): Drupal\Core\StackMiddleware\Session->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#13 /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php(106): Drupal\Core\StackMiddleware\KernelPreHandle->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#14 /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php(85): Drupal\page_cache\StackMiddleware\PageCache->pass(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#15 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php(48): Drupal\page_cache\StackMiddleware\PageCache->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#16 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php(51): Drupal\Core\StackMiddleware\ReverseProxyMiddleware->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#17 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/StackedHttpKernel.php(51): Drupal\Core\StackMiddleware\NegotiationMiddleware->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#18 /var/www/varbase/docroot/core/lib/Drupal/Core/DrupalKernel.php(704): Drupal\Core\StackMiddleware\StackedHttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#19 /var/www/varbase/docroot/index.php(19): Drupal\Core\DrupalKernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#20 {main}
+
+
+Aug 22 15:21:56  [error] ipn_payment_callback_exception
+Array
+(
+    [context] => Array
+        (
+            [backtrace] => #0 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Payment.php(1555): CRM_Core_Payment::handlePaymentMethod()
+#1 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php(285): CRM_Core_Payment::handleIPN()
+#2 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php(69): CRM_Core_Invoke::runItem()
+#3 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php(36): CRM_Core_Invoke::_invoke()
+#4 /var/www/varbase/docroot/modules/contrib/civicrm/src/Civicrm.php(88): CRM_Core_Invoke::invoke()
+#5 /var/www/varbase/docroot/modules/contrib/civicrm/src/Controller/CivicrmController.php(83): Drupal\civicrm\Civicrm->invoke()
+#6 [internal function]: Drupal\civicrm\Controller\CivicrmController->main()
+#7 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(123): call_user_func_array()
+#8 /var/www/varbase/docroot/core/lib/Drupal/Core/Render/Renderer.php(583): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->Drupal\Core\EventSubscriber\{closure}()
+#9 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(124): Drupal\Core\Render\Renderer->executeInRenderContext()
+#10 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(97): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->wrapControllerExecutionInRenderContext()
+#11 /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php(166): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->Drupal\Core\EventSubscriber\{closure}()
+#12 /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php(74): Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+#13 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/Session.php(58): Symfony\Component\HttpKernel\HttpKernel->handle()
+#14 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php(48): Drupal\Core\StackMiddleware\Session->handle()
+#15 /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php(106): Drupal\Core\StackMiddleware\KernelPreHandle->handle()
+#16 /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php(85): Drupal\page_cache\StackMiddleware\PageCache->pass()
+#17 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php(48): Drupal\page_cache\StackMiddleware\PageCache->handle()
+#18 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php(51): Drupal\Core\StackMiddleware\ReverseProxyMiddleware->handle()
+#19 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/StackedHttpKernel.php(51): Drupal\Core\StackMiddleware\NegotiationMiddleware->handle()
+#20 /var/www/varbase/docroot/core/lib/Drupal/Core/DrupalKernel.php(704): Drupal\Core\StackMiddleware\StackedHttpKernel->handle()
+#21 /var/www/varbase/docroot/index.php(19): Drupal\Core\DrupalKernel->handle()
+#22 {main}
+            [message] => No active instances of payment processor 4 were found.
+        )
+
+)
+
+
+Aug 22 15:22:08  [error] ipn_payment_callback_exception
+Array
+(
+    [context] => Array
+        (
+            [backtrace] => #0 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Payment.php(1555): CRM_Core_Payment::handlePaymentMethod()
+#1 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php(285): CRM_Core_Payment::handleIPN()
+#2 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php(69): CRM_Core_Invoke::runItem()
+#3 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php(36): CRM_Core_Invoke::_invoke()
+#4 /var/www/varbase/docroot/modules/contrib/civicrm/src/Civicrm.php(88): CRM_Core_Invoke::invoke()
+#5 /var/www/varbase/docroot/modules/contrib/civicrm/src/Controller/CivicrmController.php(83): Drupal\civicrm\Civicrm->invoke()
+#6 [internal function]: Drupal\civicrm\Controller\CivicrmController->main()
+#7 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(123): call_user_func_array()
+#8 /var/www/varbase/docroot/core/lib/Drupal/Core/Render/Renderer.php(583): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->Drupal\Core\EventSubscriber\{closure}()
+#9 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(124): Drupal\Core\Render\Renderer->executeInRenderContext()
+#10 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(97): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->wrapControllerExecutionInRenderContext()
+#11 /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php(166): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->Drupal\Core\EventSubscriber\{closure}()
+#12 /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php(74): Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+#13 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/Session.php(58): Symfony\Component\HttpKernel\HttpKernel->handle()
+#14 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php(48): Drupal\Core\StackMiddleware\Session->handle()
+#15 /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php(106): Drupal\Core\StackMiddleware\KernelPreHandle->handle()
+#16 /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php(85): Drupal\page_cache\StackMiddleware\PageCache->pass()
+#17 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php(48): Drupal\page_cache\StackMiddleware\PageCache->handle()
+#18 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php(51): Drupal\Core\StackMiddleware\ReverseProxyMiddleware->handle()
+#19 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/StackedHttpKernel.php(51): Drupal\Core\StackMiddleware\NegotiationMiddleware->handle()
+#20 /var/www/varbase/docroot/core/lib/Drupal/Core/DrupalKernel.php(704): Drupal\Core\StackMiddleware\StackedHttpKernel->handle()
+#21 /var/www/varbase/docroot/index.php(19): Drupal\Core\DrupalKernel->handle()
+#22 {main}
+            [message] => No active instances of payment processor 4 were found.
+        )
+
+)
+
+
+Aug 22 15:22:09  [info] Contribution 1 updated successfully
+
+Aug 22 15:22:10  [info] Contribution 1 Receipt sent
+
+Aug 23 09:55:15  [warning] pass in blockCount Caller: CRM_Contact_Form_Contact::buildQuickForm
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Aug 23 10:19:55  [warning] Deprecated function CRM_Core_BAO_Job::retrieve, use API.
+CRM_Core_Error::deprecatedFunctionWarning
+CRM_Core_BAO_Job::retrieve
+CRM_Admin_Form::retrieveValues
+CRM_Admin_Form::preProcess
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Aug 23 10:20:56  [warning] Deprecated function CRM_Core_BAO_Job::retrieve, use API.
+CRM_Core_Error::deprecatedFunctionWarning
+CRM_Core_BAO_Job::retrieve
+CRM_Admin_Form::retrieveValues
+CRM_Admin_Form::preProcess
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Aug 23 10:24:38  [warning] Deprecated function CRM_Core_BAO_MailSettings::retrieve, use API.
+CRM_Core_Error::deprecatedFunctionWarning
+CRM_Core_BAO_MailSettings::retrieve
+CRM_Admin_Form::retrieveValues
+CRM_Admin_Form::preProcess
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Aug 23 10:26:09  [warning] Deprecated function CRM_Core_BAO_MailSettings::retrieve, use API.
+CRM_Core_Error::deprecatedFunctionWarning
+CRM_Core_BAO_MailSettings::retrieve
+CRM_Admin_Form::retrieveValues
+CRM_Admin_Form::preProcess
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Aug 23 13:41:13  [error] 
+$Fatal Error Details = array:3 [
+  "message" => "We can't load the requested web page. This page requires cookies to be enabled in your browser settings. Please check this setting and enable cookies (if they are not enabled). Then try again. If this error persists, contact the site administrator for assistance.<br /><br />Site Administrators: This error may indicate that users are accessing this page using a domain or URL other than the configured Base URL. EXAMPLE: Base URL is http://example.org, but some users are accessing the page via http://www.example.org or a domain alias like http://myotherexample.org.<br /><br />Error type: Could not find a valid session key."
+  "code" => null
+  "exception" => CRM_Core_Exception {#2969
+    #message: "We can't load the requested web page. This page requires cookies to be enabled in your browser settings. Please check this setting and enable cookies (if they are not enabled). Then try again. If this error persists, contact the site administrator for assistance.<br /><br />Site Administrators: This error may indicate that users are accessing this page using a domain or URL other than the configured Base URL. EXAMPLE: Base URL is http://example.org, but some users are accessing the page via http://www.example.org or a domain alias like http://myotherexample.org.<br /><br />Error type: Could not find a valid session key."
+    #code: 0
+    #file: "/var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Controller.php"
+    #line: 861
+    #cause: null
+    -_trace: null
+    -errorData: array:1 [
+      "error_code" => 0
+    ]
+    trace: {
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Controller.php:861 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Controller.php:881 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Contribute/Form/ContributionBase.php:292 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Contribute/Form/Contribution/Main.php:75 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Form.php:719 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/QuickForm/Action/Display.php:76 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-packages/HTML/QuickForm/Controller.php:203 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-packages/HTML/QuickForm/Page.php:103 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Controller.php:355 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php:319 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php:69 { …}
+      /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php:36 { …}
+      /var/www/varbase/docroot/modules/contrib/civicrm/src/Civicrm.php:88 {
+        Drupal\civicrm\Civicrm->invoke($args)
+        › ob_start();
+        › $content = \CRM_Core_Invoke::invoke($args);
+        › $output = ob_get_clean();
+      }
+      /var/www/varbase/docroot/modules/contrib/civicrm/src/Controller/CivicrmController.php:83 { …}
+      Drupal\civicrm\Controller\CivicrmController->main() {}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php:123 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/Render/Renderer.php:583 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php:124 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php:97 { …}
+      /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php:166 { …}
+      /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php:74 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/Session.php:58 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php:48 { …}
+      /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php:106 { …}
+      /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php:85 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php:48 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php:51 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/StackedHttpKernel.php:51 { …}
+      /var/www/varbase/docroot/core/lib/Drupal/Core/DrupalKernel.php:704 { …}
+      /var/www/varbase/docroot/index.php:19 { …}
+    }
+  }
+]
+
+
+Aug 23 13:41:13  [debug] $backTrace = #0 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Error.php(443): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/varbase/vendor/civicrm/civicrm-core/CRM/Core/Invoke.php(39): CRM_Core_Error::handleUnhandledException(Object(CRM_Core_Exception))
+#2 /var/www/varbase/docroot/modules/contrib/civicrm/src/Civicrm.php(88): CRM_Core_Invoke::invoke((Array:3))
+#3 /var/www/varbase/docroot/modules/contrib/civicrm/src/Controller/CivicrmController.php(83): Drupal\civicrm\Civicrm->invoke((Array:3))
+#4 [internal function](): Drupal\civicrm\Controller\CivicrmController->main((Array:3), "")
+#5 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(123): call_user_func_array((Array:2), (Array:2))
+#6 /var/www/varbase/docroot/core/lib/Drupal/Core/Render/Renderer.php(583): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->Drupal\Core\EventSubscriber\{closure}()
+#7 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(124): Drupal\Core\Render\Renderer->executeInRenderContext(Object(Drupal\Core\Render\RenderContext), Object(Closure))
+#8 /var/www/varbase/docroot/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(97): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->wrapControllerExecutionInRenderContext((Array:2), (Array:2))
+#9 /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php(166): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->Drupal\Core\EventSubscriber\{closure}()
+#10 /var/www/varbase/vendor/symfony/http-kernel/HttpKernel.php(74): Symfony\Component\HttpKernel\HttpKernel->handleRaw(Object(Symfony\Component\HttpFoundation\Request), 1)
+#11 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/Session.php(58): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#12 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php(48): Drupal\Core\StackMiddleware\Session->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#13 /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php(106): Drupal\Core\StackMiddleware\KernelPreHandle->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#14 /var/www/varbase/docroot/core/modules/page_cache/src/StackMiddleware/PageCache.php(85): Drupal\page_cache\StackMiddleware\PageCache->pass(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#15 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php(48): Drupal\page_cache\StackMiddleware\PageCache->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#16 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php(51): Drupal\Core\StackMiddleware\ReverseProxyMiddleware->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#17 /var/www/varbase/docroot/core/lib/Drupal/Core/StackMiddleware/StackedHttpKernel.php(51): Drupal\Core\StackMiddleware\NegotiationMiddleware->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#18 /var/www/varbase/docroot/core/lib/Drupal/Core/DrupalKernel.php(704): Drupal\Core\StackMiddleware\StackedHttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, TRUE)
+#19 /var/www/varbase/docroot/index.php(19): Drupal\Core\DrupalKernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#20 {main}
+
+

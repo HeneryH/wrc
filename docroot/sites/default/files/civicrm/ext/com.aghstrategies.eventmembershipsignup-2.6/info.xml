@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<extension key="com.aghstrategies.eventmembershipsignup" type="module">
+  <file>eventmembershipsignup</file>
+  <name>Event Additional Signup</name>
+  <description>Generate memberships or other event registrations from price options on an event</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>AGH Strategies, LLC</author>
+    <email>info@aghstrategies.com</email>
+  </maintainer>
+  <releaseDate>2017-12-12</releaseDate>
+  <version>2.6</version>
+  <develStage>stable</develStage>
+  <compatibility>
+    <ver>5.18</ver>
+  </compatibility>
+  <urls>
+    <url desc="documentation">https://aghstrategies.com/content/event-additional-signup-extension</url>
+  </urls>
+  <civix>
+    <namespace>CRM/Eventmembershipsignup</namespace>
+  </civix>
+  <comments>
+    An administrator may tie an option in a price field to an event or membership type.  When a site visitor registers for an event and selects a price option, they will be registered for the additional event or have a new or renewed membership with that membership type.
+  </comments>
+</extension>

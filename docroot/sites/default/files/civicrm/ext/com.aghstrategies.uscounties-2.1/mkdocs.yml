@@ -1,0 +1,20 @@
+site_name: US Counties
+repo_url: https://github.com/agh1/com.aghstrategies.uscounties
+theme: 
+  name: material
+
+nav:
+- Home: index.md
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - def_list
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tilde
+  - pymdownx.betterem
+  - pymdownx.mark

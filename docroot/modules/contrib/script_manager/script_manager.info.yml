@@ -1,0 +1,9 @@
+name: Script Manager
+description: Manage JavaScript snippets included in your website.
+core_version_requirement: '>=10'
+type: module
+
+# Information added by Drupal.org packaging script on 2023-03-27
+version: '2.0.0-rc2'
+project: 'script_manager'
+datestamp: 1679957011

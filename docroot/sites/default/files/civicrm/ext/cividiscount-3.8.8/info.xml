@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension key="org.civicrm.module.cividiscount" type="module">
+  <file>cividiscount</file>
+  <name>CiviDiscount</name>
+  <description>Enables discount codes and automatic discounts for events and memberships.</description>
+  <urls>
+    <url desc="Main Extension Page">
+      https://civicrm.org/extensions/cividiscount
+    </url>
+    <url desc="Documentation">
+      https://docs.civicrm.org/discount/en/latest/
+    </url>
+    <url desc="Support">https://civicrm.stackexchange.com</url>
+    <url desc="Licensing">https://civicrm.org/license</url>
+  </urls>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>CiviCRM LLC</author>
+    <email>info@civicrm.org</email>
+  </maintainer>
+  <releaseDate>2023-07-10</releaseDate>
+  <version>3.8.8</version>
+  <develStage>stable</develStage>
+  <compatibility>
+    <ver>5.49</ver>
+  </compatibility>
+  <comments>
+    For support, please ask on chat.civicrm.org
+  </comments>
+  <civix>
+    <namespace>CRM/CiviDiscount</namespace>
+    <format>23.02.1</format>
+  </civix>
+  <classloader>
+    <psr0 prefix="CRM_" path="."/>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <mixins>
+    <mixin>menu-xml@1.0.0</mixin>
+    <mixin>smarty-v2@1.0.1</mixin>
+    <mixin>entity-types-php@1.0.0</mixin>
+  </mixins>
+  <upgrader>CRM_CiviDiscount_Upgrader</upgrader>
+</extension>

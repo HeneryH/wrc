@@ -1,0 +1,185 @@
+// WRC GOP Theme custom variables
+// -----------------------------------------------------------------------------
+
+// Color system
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+$republican-red: #d71f27;
+$republican-blue: #DE0100;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "republican-red":  $republican-red,
+    "republican-blue": $republican-blue,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+//Color Override for primary color
+$primary:       $republican-red;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+$font-size-base:              1rem !default;
+// $font-weight-lighter:         lighter !default;
+// $font-weight-light:           300 !default;
+// $font-weight-normal:          400 !default;
+// $font-weight-medium:          500 !default;
+// $font-weight-semibold:        600 !default;
+// $font-weight-bold:            700 !default;
+// $font-weight-bolder:          bolder !default;
+
+//$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+//$h3-font-size:                $font-size-base * 1.75 !default;
+//$h4-font-size:                $font-size-base * 1.5 !default;
+//$h5-font-size:                $font-size-base * 1.25 !default;
+//$h6-font-size:                $font-size-base !default;
+
+$link-color:   $blue;
+$navbar-light-brand-color: $republican-red;
+
+$navbar-brand-font-size:            $h2-font-size;
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+
+
+// END of the custom bulk changes.  Some tweaks below still ////
+
+
+// Card's default h3 title font size.
+$card-xlarge-title-font-size: 2rem;
+$card-large-title-font-size: 1.8rem;
+$card-medium-title-font-size: 1.4rem;
+$card-small-title-font-size: 1.4rem;
+$card-xsmall-title-font-size: 1.2rem;
+
+// Overlay Card default styles.
+$overlay-card-title-color: #fff;
+$overlay-card-xlarge-title-font-size: 4rem;
+$overlay-card-content-color: #fff;
+$overlay-card-content-stop1-location: 65%;
+$overlay-card-content-stop1-color: transparent;
+$overlay-card-content-stop2-location: 105%;
+$overlay-card-content-stop2-color: #000;
+$overlay-card-content-hover-opacity: 0.9;
+
+
+// rgb(215, 31, 39)  republican red
+
+// Hero Card default styles.
+$hero-card-title-color: #fff;
+$hero-card-xlarge-title-font-size: 3rem;
+$hero-card-content-hover-opacity: 0.7;
+$hero-card-content-background-color1: rgb(215, 31, 39);
+$hero-card-content-background-color2: rgba(215, 31, 39, 0.7);
+
+// Custom Varbase Hero slider media variables.
+// -----------------------------------------------------------------------------
+
+// Text color.
+$hero-title-text-color: #fff;
+$hero-brief-text-color: #fff;
+$hero-link-text-color: #fff;
+
+// Font sizes with responsive sizes.
+$hero-xlarge-title-font-size-xs: 3.3rem;
+$hero-xlarge-title-font-size-sm: 3.3rem;
+$hero-xlarge-title-font-size-md: 57px;
+$hero-xlarge-title-font-size-lg: 57px;
+$hero-xlarge-title-font-size-xl: 57px;
+
+// Hero content style.
+$hero-content-hover-opacity: 0.7;
+$hero-content-background-color1: rgb(215, 31, 39);
+$hero-content-background-color2: rgba(215, 31, 39,0.3);
+
+// Empty hero background color.
+$hero-empty-view-background: #e0e0e0;
+
+// Gutter for arrow of navigation.
+$hero-arrow-gutter: 0.63rem;
+
+// Height for screen size and less.
+$hero-min-height: 300px;
+$hero-max-height: 300px;
+
+// For screen size sm and more.
+$hero-min-height-sm: 400px;
+$hero-max-height-sm: 400px;
+
+// For screen size md and more.
+$hero-min-height-md: 600px;
+$hero-max-height-md: 600px;
+
+$hero-container-v-padding: 60px;
+$hero-container-h-padding-sm: 150px;

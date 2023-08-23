@@ -1,0 +1,12 @@
+name: "Varbase Overlay Card block"
+description: "A card block that contains background media and (title, body and link) fields."
+type: module
+package: "Varbase Blocks"
+core_version_requirement: ~10.1.0
+dependencies:
+  - varbase_layout_builder:varbase_layout_builder
+
+# Information added by Drupal.org packaging script on 2023-08-10
+version: '10.1.0-alpha9'
+project: 'varbase_layout_builder'
+datestamp: 1691661814

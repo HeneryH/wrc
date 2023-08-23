@@ -1,0 +1,85 @@
+{
+  "name": "drupal/varbase_layout_builder",
+  "description": "Provides default configuration and enhancements to utilize Drupal core's Layout Builder.",
+  "type": "drupal-module",
+  "homepage": "https://www.drupal.org/project/varbase_layout_builder",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_layout_builder",
+    "source": "http://cgit.drupalcode.org/varbase_layout_builder"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  },
+  "require": {
+    "composer/installers": "~2.0",
+    "oomphinc/composer-installers-extender": "~2.0",
+    "cweagans/composer-patches": "~1.0",
+    "drupal/core": "~10.1.0",
+    "vardot/entity-definition-update-manager": "~1.0",
+    "vardot/module-installer-factory": "~1.0",
+    "drupal/varbase_media": "~10.0",
+    "drupal/varbase_editor": "~10.0",
+    "drupal/varbase_components": "~2.0.0",
+    "drupal/layout_builder_restrictions": "~2.0",
+    "drupal/allowed_formats": "~1.0 ||~2.0",
+    "drupal/entity_block": "~1.0",
+    "drupal/block_form_alter": "~2.0",
+    "drupal/media_library_form_element": "~2.0",
+    "drupal/bootstrap_layouts": "~5.0",
+    "drupal/layout_builder_blocks": "1.1.0",
+    "drupal/layout_builder_modal": "~1.0",
+    "drupal/layout_builder_at": "~2.0",
+    "drupal/layout_builder_component_attributes": "~2.0",
+    "drupal/layout_library": "1.0-beta4",
+    "drupal/section_library": "~1.1.0",
+    "drupal/bootstrap_styles": "1.1.1",
+    "drupal/bootstrap_layout_builder": "2.1.2",
+    "drupal/block_library": "~1.0",
+    "drupal/length_indicator": "~1.0",
+    "npm-asset/aos": "~2.0"
+  },
+  "extra": {
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/bootstrap_styles": {
+        "Issue #3192061: Have the option to use other admin themes like Claro or Gin.":
+        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch",
+        "Issue #3282082: Support Bootstrap 5 on bootstrap_styles module":
+        "https://www.drupal.org/files/issues/2022-06-14/Fix-support-bootstrap-5-on-bootstrap-styles-3282082-%233.patch",
+        "Issue #3221526: Fix rendering both Background Color and Background Image or Video":
+        "https://www.drupal.org/files/issues/2023-08-09/3221526-12.patch"
+      },
+      "drupal/layout_library": {
+        "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
+        "https://www.drupal.org/files/issues/2023-01-05/3075067-19.patch",
+        "Issue #3273160: Support inline blocks in layout":
+        "https://www.drupal.org/files/issues/2022-12-14/3273160-9.patch"
+      },
+      "drupal/layout_builder_blocks": {
+        "Issue #3349066: Limit Layout Builder Blocks to the front-end theme":
+        "https://www.drupal.org/files/issues/2023-04-19/3349066-11.patch"
+      }
+    }
+  }
+}

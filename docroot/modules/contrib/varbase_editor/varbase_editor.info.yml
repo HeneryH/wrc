@@ -1,0 +1,25 @@
+name: "Varbase Editor"
+description: "Editor profile and settings to be used in most websites."
+type: module
+package: Varbase
+core_version_requirement: ~10.1.0
+dependencies:
+  - drupal:node
+  - drupal:editor
+  - drupal:ckeditor5
+  - drupal:filter
+install:
+  - ace_editor
+  - ckeditor_bidi
+  - entity_embed
+  - extlink
+  - editor_advanced_link
+  - linkit
+  - pathologic
+  - token
+  - token_filter
+
+# Information added by Drupal.org packaging script on 2023-06-27
+version: '10.0.0-alpha2'
+project: 'varbase_editor'
+datestamp: 1687903539

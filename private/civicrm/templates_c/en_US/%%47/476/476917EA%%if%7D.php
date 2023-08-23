@@ -1,0 +1,5 @@
+<?php /* Smarty version 2.6.32, created on 2023-08-23 10:26:09
+         compiled from string:%7Bif+%22Yes%22+%3D%3D+%22Yes%22%7DBounce+Processing+%3Cstrong%3E%28Default%29%3C/strong%3E%7Belse%7DEmail-to-Activity%7B/if%7D */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'string:{if "Yes" == "Yes"}Bounce Processing <strong>(Default)</strong>{else}Email-to-Activity{/if}', 1, false),)), $this); ?>
+<?php $this->_tag_stack[] = array('crmScope', array('extensionKey' => "")); $_block_repeat=true;smarty_block_crmScope($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?><?php if ('Yes' == 'Yes'): ?>Bounce Processing <strong>(Default)</strong><?php else: ?>Email-to-Activity<?php endif; ?><?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_crmScope($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>

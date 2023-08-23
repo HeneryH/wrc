@@ -1,0 +1,36 @@
+name: 'WRC GOP Theme'
+description: 'Warrington Republican Committee Theme'
+core_version_requirement: ^10
+engine: twig
+type: theme
+'base theme': false
+screenshot: screenshot.png
+'alt text': 'Screenshot of WRC GOP Theme, Varbase front-end theme.'
+regions:
+  top_bar: 'Top bar'
+  navbar_branding: 'Navbar branding'
+  navigation: 'Navigation (Desktop and Collapse)'
+  highlighted: Highlighted
+  content_above: 'Content above'
+  primary_sidebar: 'Primary sidebar'
+  content: Content
+  secondary_sidebar: 'Secondary sidebar'
+  content_below: 'Content below'
+  footer_top: 'Footer top'
+  footer_bottom: 'Footer bottom'
+libraries:
+  - wrc_theme/framework
+libraries-override:
+  content_moderation/content_moderation: wrc_theme/content_moderation
+ckeditor_stylesheets:
+  - css/base/bootstrap.base.css
+  - css/base/wrc_theme.base.css
+  - css/layout/edge2edge.layout.css
+  - css/layout/equal-height.layout.css
+  - css/layout/print.layout.css
+ckeditor5-stylesheets: false
+enforce_prop_schemas: false
+version: 1.0.0
+project: wrc_theme
+datestamp: 1690729440
+generator: 'wrc_theme:3.0.0-alpha11'

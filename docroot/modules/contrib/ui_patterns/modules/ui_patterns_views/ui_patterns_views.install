@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Install and update functions for the ui_patterns_views module.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * Implements hook_requirements().
+ */
+function ui_patterns_views_requirements($phase): array {
+  $requirements = [];
+  if ($phase === 'runtime') {
+    if (\Drupal::moduleHandler()->moduleExists('ui_patterns_views_style')) {
+      $requirements['ui_patterns_views'] = [
+        'title' => t('UI Patterns Views'),
+        'value' => t('<code>ui_patterns_views_style</code> module is enabled'),
+        'description' => t('This module is deprecated and its features are now provided by <code>ui_patterns_views</code>. It is recommended to uninstall it.'),
+        'severity' => REQUIREMENT_WARNING,
+      ];
+    }
+  }
+  return $requirements;
+}
+
+/**
+ * Migration from ui_patterns_views_style.
+ */
+ function ui_patterns_views_update_9101(): void {
+    if (!\Drupal::moduleHandler()->moduleExists('ui_patterns_views_style')) {
+      return;
+    }
+    $entityStorage = \Drupal::service('entity_type.manager')->getStorage('view');
+    $views = $entityStorage->loadMultiple();
+    foreach ($views as $view) {
+      $dependencies = $view->getDependencies();
+      if (!isset($dependencies['module'])) {
+        continue;
+      }
+      if (!in_array('ui_patterns_views_style', $dependencies['module'])) {
+        continue;
+      }
+      unset($dependencies['module']['ui_patterns_views_style']);
+      $dependencies['module'][] = 'ui_patterns_views';
+      $view->set("dependencies", $dependencies);
+      $view->save();
+    }
+    \Drupal::service('module_installer')->uninstall(['ui_patterns_views_style']);
+}

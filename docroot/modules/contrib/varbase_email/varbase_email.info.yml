@@ -1,0 +1,13 @@
+name: "Varbase Email"
+type: module
+description: "Adds email template for Varbase emails"
+package: Varbase
+core_version_requirement: ~10.1.0
+dependencies: {  }
+install:
+  - symfony_mailer
+
+# Information added by Drupal.org packaging script on 2023-06-27
+version: '10.0.0-alpha3'
+project: 'varbase_email'
+datestamp: 1687904940

@@ -1,0 +1,11 @@
+name: 'Component Libraries: Generator'
+description: Drush integration to generate CL Components interactively.
+type: module
+dependencies:
+  - drupal:sdc
+core_version_requirement: ^9 || ^10
+
+# Information added by Drupal.org packaging script on 2023-05-01
+version: '2.0.0-beta1'
+project: 'cl_generator'
+datestamp: 1682973436

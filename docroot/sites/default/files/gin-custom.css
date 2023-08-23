@@ -1,0 +1,16 @@
+.toolbar-icon-civicrm::before {
+  -webkit-mask-image:  url(/sites/default/files/CiviCRM-icon-2019-gray-small.png)  !important ;
+  mask-image: url(/sites/default/files/CiviCRM-icon-2019-gray-small.png)  !important ;
+}
+
+.footer {
+	background-color: #d71f27 !important;
+}
+
+.footer .nav-link {
+ color: #fff; //red
+
+  @include hover-focus {
+    color: #fff; //green
+  }
+}

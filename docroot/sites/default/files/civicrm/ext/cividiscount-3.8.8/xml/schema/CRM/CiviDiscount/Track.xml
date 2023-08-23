@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/CiviDiscount</base>
+  <class>Track</class>
+  <name>cividiscount_track</name>
+  <comment>Record an instance of a discount use</comment>
+  <add>1.0</add>
+  <title>Discount Tracking</title>
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Discount Item ID</comment>
+    <html>
+      <label>ID</label>
+      <type>Number</type>
+    </html>
+    <add>1.0</add>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+  <field>
+    <name>item_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Item ID of the discount code</comment>
+    <title>Discount Code ID</title>
+    <html>
+      <label>Code</label>
+      <type>EntityRef</type>
+    </html>
+    <add>1.0</add>
+  </field>
+  <foreignKey>
+    <name>item_id</name>
+    <table>cividiscount_item</table>
+    <key>id</key>
+    <add>1.0</add>
+    <onDelete>SET NULL</onDelete>
+  </foreignKey>
+  <field>
+    <name>contact_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Contact ID for the contact that used this discount</comment>
+    <html>
+      <label>Contact</label>
+      <type>EntityRef</type>
+    </html>
+    <add>1.0</add>
+  </field>
+  <foreignKey>
+    <name>contact_id</name>
+    <table>civicrm_contact</table>
+    <key>id</key>
+    <add>1.0</add>
+    <onDelete>SET NULL</onDelete>
+  </foreignKey>
+  <field>
+    <name>used_date</name>
+    <type>datetime</type>
+    <comment>Date of use</comment>
+    <html>
+      <label>Date Used</label>
+      <type>Select Date</type>
+    </html>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>contribution_id</name>
+    <type>int unsigned</type>
+    <comment>FK to contribution table</comment>
+    <html>
+      <label>Contribution</label>
+      <type>EntityRef</type>
+    </html>
+    <add>1.0</add>
+  </field>
+  <foreignKey>
+    <name>contribution_id</name>
+    <table>civicrm_contribution</table>
+    <key>id</key>
+    <add>1.0</add>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  <field>
+    <name>entity_table</name>
+    <type>varchar</type>
+    <length>64</length>
+    <required>true</required>
+    <comment>Table where referenced item is stored</comment>
+    <pseudoconstant>
+      <callback>CRM_CiviDiscount_BAO_Track::entityTables</callback>
+    </pseudoconstant>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>entity_id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Foreign key to the referenced item</comment>
+    <html>
+      <label>Entity</label>
+    </html>
+    <add>1.0</add>
+  </field>
+  <dynamicForeignKey>
+    <idColumn>entity_id</idColumn>
+    <typeColumn>entity_table</typeColumn>
+    <add>4.0</add>
+  </dynamicForeignKey>
+</table>

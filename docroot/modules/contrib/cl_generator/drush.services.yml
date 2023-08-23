@@ -1,0 +1,6 @@
+services:
+  sdc.command.generator:
+    class: Drupal\cl_generator\Generators\ComponentGenerator
+    arguments: ['@library.discovery']
+    tags:
+      -  { name: drush.generator.v2 }

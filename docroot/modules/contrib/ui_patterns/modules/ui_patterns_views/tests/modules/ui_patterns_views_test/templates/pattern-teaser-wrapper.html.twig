@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * Test teaser wrapper pattern.
+ */
+#}
+{% if title %}
+<h2 class="teaser-wrapper-title">{{ title }}</h2>
+{% endif %}
+{% if content %}
+  <div class="teaser-wrapper-content">{{ content }}</div>
+{% endif %}

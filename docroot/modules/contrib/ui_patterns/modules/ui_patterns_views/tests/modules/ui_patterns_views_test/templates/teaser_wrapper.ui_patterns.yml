@@ -1,0 +1,16 @@
+teaser_wrapper:
+  label: "Teaser wrapper"
+  variants:
+    default:
+      label: "Default"
+    highlighted:
+      label: "Highlighted"
+  fields:
+    title:
+      type: "text"
+      label: "Title"
+      preview: "Title"
+    content:
+      type: "render"
+      label: "Content"
+      preview: "Content"
