@@ -7,6 +7,17 @@
 	background-color: #d71f27 !important;
 }
 
+.hero-slide-content {
+	background-color:rgba(215, 31, 39, 0.5) !important;
+	width: fit-content !important;
+	top: 10px !important;
+        right: 75px !important;
+        position: absolute !important;
+}
+
+
+
+
 .footer .nav-link {
  color: #fff; //red
 
